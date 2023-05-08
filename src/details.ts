@@ -13,6 +13,7 @@ export interface EmploymentPeroid {
 }
 
 export interface Project {
+  id: number;
   employmentPeriodId: number;
   name: string;
   goal: string;
@@ -33,6 +34,7 @@ export const employmentPeriods: EmploymentPeroid[] = [
 
 export const details: Project[] = [
   {
+    id: 1,
     employmentPeriodId: 1,
     name: "Trainee project",
     goal: "Investigating RxJava integration into the company toolbox",
