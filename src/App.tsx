@@ -1,9 +1,10 @@
 import "./App.css";
 import CategoryHeader from "./CategoryHeader";
-import DarkModeToggler from "./DarkModeToggler";
+import NavHeader from "./NavHeader";
 import { details } from "./details";
 
 function App() {
+  // TODO: filter based on active view
   const jobSummary = details.reduce((summary, jobDetails) => {
     jobDetails.technologies.forEach((tech) => {
       if (summary[tech]) {
@@ -14,6 +15,7 @@ function App() {
     });
     return summary;
   }, {} as Record<string, number>);
+
   const experienceSummary = Object.entries(jobSummary).map(([key, value]) => {
     return (
       <div key={key}>
@@ -25,9 +27,9 @@ function App() {
 
   return (
     <div className="container-sm mx-auto h-full max-w-screen-lg p-5">
-      <div className="flex justify-between">
+      <NavHeader></NavHeader>
+      <div className="mt-8">
         <CategoryHeader text="Personal & Contact Details"></CategoryHeader>
-        <DarkModeToggler></DarkModeToggler>
       </div>
       <div className="py-5 text-stone-900 dark:text-sky-100">
         <p>
