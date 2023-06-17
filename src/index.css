@@ -18,3 +18,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+/* TODO: revise colours, add dark-mode colours, do not colour in print view */
+a {
+  @apply text-blue-600 underline visited:text-purple-600 hover:text-blue-800;
+}

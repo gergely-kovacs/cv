@@ -4,7 +4,7 @@ interface CategoryHeaderParams {
 
 function CategoryHeader({ text }: CategoryHeaderParams) {
   return (
-    <h1 className="text-2xl font-bold text-stone-800 underline dark:text-sky-200">
+    <h1 className="text-2xl font-bold text-zinc-800 underline dark:text-neutral-300">
       {text}
     </h1>
   );
