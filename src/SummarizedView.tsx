@@ -4,7 +4,7 @@ import PersonalDetails from './PersonalDetails';
 import PreviousClients from './PreviousClients';
 import PreviousEmployers from './PreviousEmployers';
 
-function App() {
+function SummarizedView() {
     return (
         <div class="container-sm mx-auto h-full max-w-screen-md p-5">
             <NavHeader />
@@ -16,4 +16,4 @@ function App() {
     );
 }
 
-export default App;
+export default SummarizedView;

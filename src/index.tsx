@@ -1,9 +1,11 @@
-/* @refresh reload */
+import { Route, Router, Routes } from '@solidjs/router';
+import { lazy } from 'solid-js';
 import { render } from 'solid-js/web';
 
+import SummarizedView from './SummarizedView';
 import './index.css';
-import App from './App';
 
+const DetailedView = lazy(() => import('./DetailedView'));
 const root = document.getElementById('root');
 
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
@@ -13,5 +15,15 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 }
 
 if (root) {
-    render(() => <App />, root);
+    render(
+        () => (
+            <Router>
+                <Routes>
+                    <Route path="/" component={SummarizedView} />
+                    <Route path="/details" component={DetailedView} />
+                </Routes>
+            </Router>
+        ),
+        root
+    );
 }

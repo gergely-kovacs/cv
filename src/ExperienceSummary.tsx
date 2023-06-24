@@ -1,10 +1,10 @@
 import CategoryHeader from './CategoryHeader';
-import { CORE_TECHNOLOGIES, details } from './details';
+import { CORE_TECHNOLOGIES, projects } from './details';
 
 function ExperienceSummary() {
     const MONTHS_IN_A_YEAR = 12;
 
-    const jobSummary = details.reduce((summary, jobDetails) => {
+    const jobSummary = projects.reduce((summary, jobDetails) => {
         jobDetails.technologies.forEach((tech) => {
             if (summary[tech]) {
                 summary[tech] += jobDetails.duration_months;

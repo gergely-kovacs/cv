@@ -105,7 +105,7 @@ export const employmentPeriods: EmploymentPeroid[] = [
     },
 ];
 
-export const details: Project[] = [
+export const projects: Project[] = [
     {
         id: 1,
         employmentPeriodId: 1,

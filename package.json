@@ -1,9 +1,12 @@
 {
     "dependencies": {
+        "@solidjs/router": "^0.8.2",
+        "lodash": "^4.17.21",
         "solid-js": "^1.7.6"
     },
     "description": "My personal CV in a website form",
     "devDependencies": {
+        "@types/lodash": "^4.14.195",
         "@typescript-eslint/eslint-plugin": "^5.59.11",
         "@typescript-eslint/parser": "^5.59.11",
         "autoprefixer": "^10.4.14",
