@@ -7,10 +7,9 @@
     font-weight: 400;
     color-scheme: light dark;
     font-synthesis: none;
-    text-rendering: optimizeLegibility;
+    text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -20,6 +19,6 @@ body {
 }
 
 /* TODO: revise colours, add dark-mode colours, do not colour in print view */
-a {
+/* a {
     @apply text-blue-600 underline visited:text-purple-600 hover:text-blue-800;
-}
+} */
