@@ -1,6 +1,7 @@
 import { groupBy } from 'lodash';
 import { Component, For } from 'solid-js';
 import CategoryHeader from './CategoryHeader';
+import './EmploymentHistory.css';
 import { EmploymentPeroid, employers, employmentPeriods, projects } from './details';
 
 const EmploymentHistory: Component = () => {
@@ -25,35 +26,34 @@ const EmploymentHistory: Component = () => {
                         );
 
                         return (
-                            <div class="mb-4">
-                                <div class="mb-4">
+                            <div class="mb-8">
+                                <div class="employment-period-details relative pb-4 ps-3">
                                     <h2 class="text-xl text-gray-700 dark:text-neutral-300">{employer?.name}</h2>
 
-                                    <h3>
-                                        <For each={employmentPeriod.positions}>
-                                            {(position, index) => {
-                                                return (
-                                                    <div>
-                                                        {index() === employmentPeriod.positions.length - 1
-                                                            ? position
-                                                            : position + ', '}
-                                                    </div>
-                                                );
-                                            }}
-                                        </For>
-                                    </h3>
+                                    <For each={employmentPeriod.positions}>
+                                        {(position, index) => {
+                                            return (
+                                                <div>
+                                                    {index() === employmentPeriod.positions.length - 1
+                                                        ? position
+                                                        : position + ', '}
+                                                </div>
+                                            );
+                                        }}
+                                    </For>
 
-                                    <h3 class="text-sm italic">
+                                    <div class="text-sm italic">
                                         {employmentPeriod.startDate.toLocaleDateString() +
                                             ' - ' +
                                             employmentPeriod.endDate.toLocaleDateString()}
-                                    </h3>
+                                    </div>
                                 </div>
 
+                                {/* FIXME: the last project should only have the bofder half-way down */}
                                 <For each={projects}>
                                     {(project) => {
                                         return (
-                                            <div class="ms-4 mb-4">
+                                            <div class="pb-4 ps-6 border-l-2 border-gray-600 dark:border-gray-400">
                                                 <h4 class="text-lg text-gray-700 dark:text-neutral-300">
                                                     {project.name}
                                                 </h4>

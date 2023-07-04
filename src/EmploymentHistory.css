@@ -1,0 +1,12 @@
+/* TODO: use ::before to make a background image of a little circle */
+/* TODO: do the same for each project */
+
+.employment-period-details::after {
+    content: '';
+    width: 2px;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @apply bg-gray-600 dark:bg-gray-400;
+}
