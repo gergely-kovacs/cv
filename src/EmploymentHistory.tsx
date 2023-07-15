@@ -26,8 +26,8 @@ const EmploymentHistory: Component = () => {
                         );
 
                         return (
-                            <div class="mb-8">
-                                <div class="employment-period-details relative pb-4 ps-3">
+                            <div class="employment-period mb-8">
+                                <div class="employment-period-details relative pb-4 ps-4">
                                     <h2 class="text-xl text-gray-700 dark:text-neutral-300">{employer?.name}</h2>
 
                                     <For each={employmentPeriod.positions}>
@@ -49,11 +49,10 @@ const EmploymentHistory: Component = () => {
                                     </div>
                                 </div>
 
-                                {/* FIXME: the last project should only have the bofder half-way down */}
                                 <For each={projects}>
                                     {(project) => {
                                         return (
-                                            <div class="pb-4 ps-6 border-l-2 border-gray-600 dark:border-gray-400">
+                                            <div class="project-details relative border-l-2 border-gray-600 pb-4 ps-7 dark:border-gray-400">
                                                 <h4 class="text-lg text-gray-700 dark:text-neutral-300">
                                                     {project.name}
                                                 </h4>
