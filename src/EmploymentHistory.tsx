@@ -26,9 +26,14 @@ const EmploymentHistory: Component = () => {
                         );
 
                         return (
-                            <div class="employment-period mb-8">
+                            <div
+                                class="employment-period cursor-pointer mb-8"
+                                onClick={(event) => event.currentTarget.classList.toggle('collapsed')}
+                            >
                                 <div class="employment-period-details relative pb-4 ps-4">
-                                    <h2 class="text-xl text-gray-700 dark:text-neutral-300">{employer?.name}</h2>
+                                    <h2 class="flex text-xl text-gray-700 dark:text-neutral-300">{employer?.name}
+                                        <span class='ml-auto chevron'>&#708;</span>
+                                    </h2>
 
                                     <For each={employmentPeriod.positions}>
                                         {(position, index) => {
@@ -49,49 +54,51 @@ const EmploymentHistory: Component = () => {
                                     </div>
                                 </div>
 
-                                <For each={projects}>
-                                    {(project) => {
-                                        return (
-                                            <div class="project-details relative border-l-2 border-gray-600 pb-4 ps-7 dark:border-gray-400">
-                                                <h4 class="text-lg text-gray-700 dark:text-neutral-300">
-                                                    {project.name}
-                                                </h4>
+                                <div class="projects">
+                                    <For each={projects}>
+                                        {(project) => {
+                                            return (
+                                                <div class="project-details relative border-l-2 border-gray-600 pb-4 ps-7 dark:border-gray-400">
+                                                    <h4 class="text-lg text-gray-700 dark:text-neutral-300">
+                                                        {project.name}
+                                                    </h4>
 
-                                                <div>{project.goal}</div>
+                                                    <div>{project.goal}</div>
 
-                                                <div>
-                                                    <For each={project.technologies}>
-                                                        {(technology, index) => {
-                                                            return (
-                                                                <span>
-                                                                    {index() === project.technologies.length - 1
-                                                                        ? technology
-                                                                        : technology + ', '}
-                                                                </span>
-                                                            );
-                                                        }}
-                                                    </For>
+                                                    <div>
+                                                        <For each={project.technologies}>
+                                                            {(technology, index) => {
+                                                                return (
+                                                                    <span>
+                                                                        {index() === project.technologies.length - 1
+                                                                            ? technology
+                                                                            : technology + ', '}
+                                                                    </span>
+                                                                );
+                                                            }}
+                                                        </For>
+                                                    </div>
+
+                                                    <div>
+                                                        <For each={project.tasks}>
+                                                            {(task, index) => {
+                                                                return (
+                                                                    <span>
+                                                                        {index() === project.tasks.length - 1
+                                                                            ? task
+                                                                            : task + ', '}
+                                                                    </span>
+                                                                );
+                                                            }}
+                                                        </For>
+                                                    </div>
+
+                                                    <div>{project.duration_months + ' months'}</div>
                                                 </div>
-
-                                                <div>
-                                                    <For each={project.tasks}>
-                                                        {(task, index) => {
-                                                            return (
-                                                                <span>
-                                                                    {index() === project.tasks.length - 1
-                                                                        ? task
-                                                                        : task + ', '}
-                                                                </span>
-                                                            );
-                                                        }}
-                                                    </For>
-                                                </div>
-
-                                                <div>{project.duration_months + ' months'}</div>
-                                            </div>
-                                        );
-                                    }}
-                                </For>
+                                            );
+                                        }}
+                                    </For>
+                                </div>
                             </div>
                         );
                     }}
