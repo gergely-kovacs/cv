@@ -1,6 +1,7 @@
 import CategoryHeader from './CategoryHeader';
 import { CORE_TECHNOLOGIES, projects } from './details';
 
+// TODO: add a cog icon with a modal where you can configure which technologies are shown
 function ExperienceSummary() {
     const MONTHS_IN_A_YEAR = 12;
 
@@ -29,14 +30,14 @@ function ExperienceSummary() {
 
         if (value >= MONTHS_IN_A_YEAR && months > 0) {
             return (
-                <span>
+                <div>
                     {years + ' years'}, {months + ' months'}
-                </span>
+                </div>
             );
         } else if (value >= MONTHS_IN_A_YEAR) {
-            return <span>{years + ' years'}</span>;
+            return <div>{years + ' years'}</div>;
         } else {
-            return <span>{value + ' months'}</span>;
+            return <div>{value + ' months'}</div>;
         }
     }
 
@@ -46,8 +47,9 @@ function ExperienceSummary() {
         })
         .map(([key, value]) => {
             return (
-                <div>
-                    <span class="inline-block w-64 font-semibold">{key}:</span>
+                // TODO: consider colouring by row to make it easier to read
+                <div class="flex flex-wrap justify-between">
+                    <div class="font-semibold">{key}:</div>
                     {mapMonthsToYearsAndMonths(value)}
                 </div>
             );
