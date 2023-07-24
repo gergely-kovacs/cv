@@ -6,37 +6,37 @@ function PersonalDetails() {
             <div class="mt-8">
                 <CategoryHeader text="Personal & Contact Details" />
             </div>
-            <div class="mb-8 mt-4 text-gray-800 dark:text-neutral-400">
+            <div class="mb-8 mt-4 flex flex-col gap-2 text-gray-800 dark:text-neutral-400 sm:gap-0">
                 <div class="flex flex-wrap justify-between">
-                    <div class="font-semibold">First name:</div>
+                    <div class="basis-full font-semibold sm:basis-auto">First name:</div>
                     <div>Gergely</div>
                 </div>
                 <div class="flex flex-wrap justify-between">
-                    <div class="font-semibold">Last name:</div>
+                    <div class="basis-full font-semibold sm:basis-auto">Last name:</div>
                     <div>Kovacs</div>
                 </div>
                 <div class="flex flex-wrap justify-between">
-                    <div class="font-semibold">Date of birth:</div>
+                    <div class="basis-full font-semibold sm:basis-auto">Date of birth:</div>
                     <div>1992. 04. 11.</div>
                 </div>
                 <div class="flex flex-wrap justify-between">
-                    <div class="font-semibold">Nationality:</div>
+                    <div class="basis-full font-semibold sm:basis-auto">Nationality:</div>
                     <div>hungarian</div>
                 </div>
                 <div class="flex flex-wrap justify-between">
-                    <div class="font-semibold">Highest degree:</div>
+                    <div class="basis-full font-semibold sm:basis-auto">Highest degree:</div>
                     <div>Computer Science Engineering (BSc)</div>
                 </div>
                 <div class="flex flex-wrap justify-between">
-                    <div class="font-semibold">Email:</div>
+                    <div class="basis-full font-semibold sm:basis-auto">Email:</div>
                     <div>gergely-kovacs@hotmail.com</div>
                 </div>
                 <div class="flex flex-wrap justify-between">
-                    <div class="font-semibold">Phone:</div>
+                    <div class="basis-full font-semibold sm:basis-auto">Phone:</div>
                     <div>+36 70 389 7606</div>
                 </div>
                 <div class="flex flex-wrap justify-between">
-                    <div class="font-semibold">Github:</div>
+                    <div class="basis-full font-semibold sm:basis-auto">Github:</div>
                     <div>
                         <a target="_blank" href="https://github.com/gergely-kovacs">
                             gergely-kovacs
