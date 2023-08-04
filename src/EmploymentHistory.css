@@ -64,11 +64,10 @@
     background-image: linear-gradient(180deg, rgb(156 163 175) 0 50%, transparent 50% 100%);
 }
 
-/* TODO: double check max height after refactoring to flex */
 .projects {
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
-    max-height: 1080px;
+    max-height: 1152px;
 }
 
 .collapsed .projects {

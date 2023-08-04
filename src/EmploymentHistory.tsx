@@ -26,13 +26,16 @@ const EmploymentHistory: Component = () => {
                         );
 
                         return (
-                            <div
-                                class="employment-period cursor-pointer mb-8"
-                                onClick={(event) => event.currentTarget.classList.toggle('collapsed')}
-                            >
-                                <div class="employment-period-details relative pb-4 ps-4">
-                                    <h2 class="flex text-xl text-gray-700 dark:text-neutral-300">{employer?.name}
-                                        <span class='ml-auto chevron'>&#708;</span>
+                            <div class="employment-period mb-8">
+                                <div
+                                    class="employment-period-details relative cursor-pointer pb-4 ps-4"
+                                    onClick={(event) =>
+                                        event.currentTarget.parentElement?.classList.toggle('collapsed')
+                                    }
+                                >
+                                    <h2 class="flex text-xl text-gray-700 dark:text-neutral-300">
+                                        {employer?.name}
+                                        <span class="chevron ml-auto">&#708;</span>
                                     </h2>
 
                                     <For each={employmentPeriod.positions}>
@@ -93,7 +96,7 @@ const EmploymentHistory: Component = () => {
                                                         </For>
                                                     </div>
 
-                                                    <div>{project.duration_months + ' months'}</div>
+                                                    <div>{project.duration_months + ' month(s)'}</div>
                                                 </div>
                                             );
                                         }}

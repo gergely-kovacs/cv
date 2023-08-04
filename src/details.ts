@@ -100,7 +100,7 @@ export const employmentPeriods: EmploymentPeroid[] = [
         employerId: 2,
         positions: ['Software Engineer', 'Senior Software Engineer'],
         startDate: new Date('2021-03-01'),
-        endDate: new Date('2023-06-31'),
+        endDate: new Date('2023-07-31'),
         website: 'https://www.gg.dev/',
     },
 ];
