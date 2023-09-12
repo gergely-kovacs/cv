@@ -7,7 +7,7 @@ function NavHeader() {
             <A
                 class="inline-flex items-center border-b border-gray-300 px-4 py-2 text-sm text-gray-700 hover:border-gray-400 dark:border-gray-500 dark:text-white dark:hover:border-gray-300 sm:text-base"
                 activeClass="border border-b-0 rounded-t-md"
-                href="/"
+                href="/cv/"
                 end={true}
             >
                 Summary
@@ -16,7 +16,7 @@ function NavHeader() {
             <A
                 class="inline-flex items-center border-b border-gray-300 px-4 py-2 text-sm text-gray-700 hover:border-gray-400 dark:border-gray-500 dark:text-white dark:hover:border-gray-300 sm:text-base"
                 activeClass="border border-b-0 rounded-t-md"
-                href="/details"
+                href="/cv/details"
                 end={true}
             >
                 Details

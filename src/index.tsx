@@ -19,8 +19,8 @@ if (root) {
         () => (
             <Router>
                 <Routes>
-                    <Route path="/" component={SummarizedView} />
-                    <Route path="/details" component={DetailedView} />
+                    <Route path="/cv/" component={SummarizedView} />
+                    <Route path="/cv/details" component={DetailedView} />
                 </Routes>
             </Router>
         ),
