@@ -74,6 +74,10 @@
     max-height: 0;
 }
 
+.chevron {
+    font-size: 28px;
+}
+
 .collapsed .chevron {
     visibility: hidden;
 }
