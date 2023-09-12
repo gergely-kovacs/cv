@@ -30,6 +30,7 @@
     "private": true,
     "scripts": {
         "build": "vite build",
+        "preview": "vite preview",
         "dev": "vite",
         "lint": "npm run lint:scripts && npm run lint:style",
         "lint:fix": "npm run lint:scripts:fix && npm run lint:style:fix",
