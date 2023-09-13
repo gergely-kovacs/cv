@@ -18,7 +18,6 @@ body {
     min-height: 100vh;
 }
 
-/* TODO: revise colours, add dark-mode colours, do not colour in print view */
-/* a {
-    @apply text-blue-600 underline visited:text-purple-600 hover:text-blue-800;
-} */
+a {
+    @apply text-sky-600 underline visited:text-sky-700 hover:text-sky-800 dark:text-indigo-300 dark:visited:text-indigo-400 dark:hover:text-indigo-500 print:text-gray-800 print:no-underline print:visited:text-gray-800 dark:print:text-gray-800 dark:print:visited:text-gray-800;
+}
