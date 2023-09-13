@@ -37,7 +37,7 @@ function DarkModeToggler() {
     });
 
     return (
-        <div class="mx-4 print:hidden">
+        <div class="mx-4">
             <button type="button" title="Toggle dark mode" aria-hidden="true" onClick={toggleDarkMode}>
                 {theme() === 'dark' ? (
                     <div class="h-6 w-6 text-gray-300">
