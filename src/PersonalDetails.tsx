@@ -46,7 +46,7 @@ function PersonalDetails() {
                 <div class="flex flex-wrap justify-between">
                     <div class="basis-full font-semibold sm:basis-auto">Detailed CV:</div>
                     <div>
-                        <a target="_blank" href="https://github.com/gergely-kovacs">
+                        <a target="_blank" href="https://gergely-kovacs.github.io/cv/">
                             gergely-kovacs.github.io/cv
                         </a>
                     </div>
