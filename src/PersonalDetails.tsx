@@ -6,7 +6,7 @@ function PersonalDetails() {
             <div class="mt-8">
                 <CategoryHeader text="Personal & Contact Details" />
             </div>
-            <div class="mb-8 mt-4 flex flex-col gap-2 text-gray-800 dark:text-neutral-400 sm:gap-0">
+            <div class="mb-8 mt-4 flex flex-col gap-2 text-gray-800 dark:text-neutral-300 sm:gap-0">
                 <div class="flex flex-wrap justify-between">
                     <div class="basis-full font-semibold sm:basis-auto">First name:</div>
                     <div>Gergely</div>
@@ -43,7 +43,14 @@ function PersonalDetails() {
                         </a>
                     </div>
                 </div>
-                {/* TODO: add website link*/}
+                <div class="flex flex-wrap justify-between">
+                    <div class="basis-full font-semibold sm:basis-auto">Detailed CV:</div>
+                    <div>
+                        <a target="_blank" href="https://github.com/gergely-kovacs">
+                            gergely-kovacs.github.io/cv
+                        </a>
+                    </div>
+                </div>
             </div>
         </>
     );

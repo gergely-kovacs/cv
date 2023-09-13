@@ -9,8 +9,10 @@ const EmploymentHistory: Component = () => {
 
     return (
         <>
-            <CategoryHeader text="Employment history" />
-            <div class="mb-8 mt-4 text-gray-800 dark:text-neutral-400">
+            <div class="mt-8">
+                <CategoryHeader text="Employment history" />
+            </div>
+            <div class="mb-8 mt-4 text-gray-800 dark:text-neutral-300">
                 <For
                     each={Object.entries(projectsGroupedByEmploymentPeriod).sort(
                         ([employmentPeriodId], [otherEmploymentPeriodId]) =>
@@ -33,7 +35,7 @@ const EmploymentHistory: Component = () => {
                                         event.currentTarget.parentElement?.classList.toggle('collapsed')
                                     }
                                 >
-                                    <h2 class="flex text-xl text-gray-700 dark:text-neutral-300">
+                                    <h2 class="flex text-xl text-gray-700 dark:text-neutral-200">
                                         {employer?.name}
                                         <span class="chevron ml-auto">&#708;</span>
                                     </h2>
@@ -61,8 +63,8 @@ const EmploymentHistory: Component = () => {
                                     <For each={projects}>
                                         {(project) => {
                                             return (
-                                                <div class="project-details relative border-l-2 border-gray-600 pb-4 ps-7 dark:border-gray-400">
-                                                    <h4 class="text-lg text-gray-700 dark:text-neutral-300">
+                                                <div class="project-details relative border-l-2 border-gray-600 pb-4 ps-7 dark:border-gray-400 print:border-none">
+                                                    <h4 class="text-lg text-gray-700 dark:text-neutral-200">
                                                         {project.name}
                                                     </h4>
 

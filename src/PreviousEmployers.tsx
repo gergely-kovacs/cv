@@ -8,7 +8,7 @@ function PreviousEmployers() {
             <div class="mt-8">
                 <CategoryHeader text="Past Employers" />
             </div>
-            <div class="mb-8 mt-4 text-gray-800 dark:text-neutral-400">
+            <div class="mb-8 mt-4 text-gray-800 dark:text-neutral-300">
                 <For each={employers}>
                     {(employer, index) => {
                         return (

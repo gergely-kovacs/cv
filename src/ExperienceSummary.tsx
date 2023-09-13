@@ -58,7 +58,7 @@ function ExperienceSummary() {
     return (
         <>
             <CategoryHeader text="Experience" />
-            <div class="mb-8 mt-4 text-gray-800 dark:text-neutral-400">{experienceSummary}</div>
+            <div class="mb-8 mt-4 text-gray-800 dark:text-neutral-300">{experienceSummary}</div>
         </>
     );
 }
