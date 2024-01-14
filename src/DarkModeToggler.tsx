@@ -1,4 +1,4 @@
-import { createEffect, createSignal } from 'solid-js';
+import { createSignal, onMount } from 'solid-js';
 import Moon from './assets/icons/moon.svg';
 import Sun from './assets/icons/sun.svg';
 
@@ -34,7 +34,7 @@ function DarkModeToggler() {
         setColorPreference(theme());
     }
 
-    createEffect(() => {
+    onMount(() => {
         setColorPreference(theme());
     });
 
