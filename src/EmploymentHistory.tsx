@@ -16,15 +16,15 @@ const EmploymentHistory: Component = () => {
                 <For
                     each={Object.entries(projectsGroupedByEmploymentPeriod).sort(
                         ([employmentPeriodId], [otherEmploymentPeriodId]) =>
-                            Number(otherEmploymentPeriodId) - Number(employmentPeriodId)
+                            Number(otherEmploymentPeriodId) - Number(employmentPeriodId),
                     )}
                 >
                     {([employmentPeriodId, projects]) => {
                         const employmentPeriod = employmentPeriods.find(
-                            (period) => period.id === Number(employmentPeriodId)
+                            (period) => period.id === Number(employmentPeriodId),
                         ) as EmploymentPeroid;
                         const employer = employers.find(
-                            (employer) => employer.id === Number(employmentPeriod.employerId)
+                            (employer) => employer.id === Number(employmentPeriod.employerId),
                         );
 
                         return (
