@@ -38,8 +38,8 @@ function PersonalDetails() {
                 <div class="flex flex-wrap justify-between">
                     <div class="basis-full font-semibold sm:basis-auto">LinkedIn:</div>
                     <div>
-                        <a target="_blank" href="https://www.linkedin.com/in/gergely-kov%C3%A1cs-473551293/">
-                            gergely-kovács-473551293
+                        <a target="_blank" href="https://www.linkedin.com/in/geko92/">
+                            geko92
                         </a>
                     </div>
                 </div>
