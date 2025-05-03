@@ -7,7 +7,11 @@
     top: calc(50% - 11px);
     border-radius: 50%;
     transition: transform 0.3s ease-out;
-    @apply bg-gray-700 dark:bg-gray-300;
+    background-color: var(--color-gray-700);
+
+    @variant dark {
+        background-color: var(--color-gray-300);
+    }
 }
 
 .employment-period.collapsed .employment-period-details::before {
@@ -23,7 +27,11 @@
     left: 0;
     top: 50%;
     transition: height 0.1s ease-in-out;
-    @apply bg-gray-600 dark:bg-gray-400;
+    background-color: var(--color-gray-600);
+
+    @variant dark {
+        background-color: var(--color-gray-400);
+    }
 }
 
 .employment-period.collapsed .employment-period-details::after {
@@ -38,7 +46,11 @@
     position: absolute;
     left: 0;
     top: 50%;
-    @apply bg-gray-600 dark:bg-gray-400;
+    background-color: var(--color-gray-600);
+
+    @variant dark {
+        background-color: var(--color-gray-400);
+    }
 }
 
 .project-details::after {
@@ -49,7 +61,11 @@
     left: 10px;
     top: calc(50% - 3.5px);
     border-radius: 50%;
-    @apply bg-gray-700 dark:bg-gray-300;
+    background-color: var(--color-gray-700);
+
+    @variant dark {
+        background-color: var(--color-gray-300);
+    }
 }
 
 .employment-period .project-details:last-of-type {
