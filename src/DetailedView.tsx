@@ -4,7 +4,7 @@ import NavHeader from './NavHeader';
 
 const DetailedView: Component = () => {
     return (
-        <div class="container-sm mx-auto h-full max-w-screen-md p-5">
+        <div class="container-sm mx-auto h-full max-w-(--breakpoint-md) p-5">
             <NavHeader />
             <EmploymentHistory />
         </div>

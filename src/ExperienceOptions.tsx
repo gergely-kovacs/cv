@@ -28,7 +28,7 @@ function ExperienceOptions(props: ExperienceOptionsParams) {
 
     // TODO: implement a search field that highlights labels on match
     return (
-        <dialog ref={props.ref} class="max-w-screen-sm px-6 py-4">
+        <dialog ref={props.ref} class="max-w-(--breakpoint-sm) px-6 py-4">
             <h2 class="text-xl">Please, select the technologies you wish to see!</h2>
             <hr class="mb-6 mt-2" />
             <form method="dialog" onSubmit={updateSelectedTechnologies} ref={technologyForm}>
