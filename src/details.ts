@@ -295,6 +295,7 @@ export const projects: Project[] = [
         tasks: ['Responsivity improvements', 'template cleanup', 'resource deduplication'],
         duration_months: 1,
     },
+    // FIXME: Aldi Mobile missing from here
     {
         id: 14,
         employmentPeriodId: 5,
