@@ -1,4 +1,4 @@
-import { Route, Router, Routes } from '@solidjs/router';
+import { Route, Router } from '@solidjs/router';
 import { lazy } from 'solid-js';
 import { render } from 'solid-js/web';
 
@@ -10,7 +10,7 @@ const root = document.getElementById('root');
 
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
     throw new Error(
-        'Root element not found. Did you forget to add it to your index.html? Or maybe the id attribute got misspelled?'
+        'Root element not found. Did you forget to add it to your index.html? Or maybe the id attribute got misspelled?',
     );
 }
 
@@ -18,12 +18,10 @@ if (root) {
     render(
         () => (
             <Router>
-                <Routes>
-                    <Route path="/cv/" component={SummarizedView} />
-                    <Route path="/cv/details" component={DetailedView} />
-                </Routes>
+                <Route path="/cv/" component={SummarizedView} />
+                <Route path="/cv/details" component={DetailedView} />
             </Router>
         ),
-        root
+        root,
     );
 }
