@@ -8,10 +8,10 @@
     border-radius: 50%;
     transition: transform 0.3s ease-out;
     background-color: var(--color-gray-700);
+}
 
-    @variant dark {
-        background-color: var(--color-gray-300);
-    }
+.dark .employment-period-details::before {
+    background-color: var(--color-gray-300);
 }
 
 .employment-period.collapsed .employment-period-details::before {
@@ -28,10 +28,10 @@
     top: 50%;
     transition: height 0.1s ease-in-out;
     background-color: var(--color-gray-600);
+}
 
-    @variant dark {
-        background-color: var(--color-gray-400);
-    }
+.dark .employment-period-details::after {
+    background-color: var(--color-gray-400);
 }
 
 .employment-period.collapsed .employment-period-details::after {
@@ -47,10 +47,10 @@
     left: 0;
     top: 50%;
     background-color: var(--color-gray-600);
+}
 
-    @variant dark {
-        background-color: var(--color-gray-400);
-    }
+.dark .project-details::before {
+    background-color: var(--color-gray-400);
 }
 
 .project-details::after {
@@ -62,10 +62,10 @@
     top: calc(50% - 3.5px);
     border-radius: 50%;
     background-color: var(--color-gray-700);
+}
 
-    @variant dark {
-        background-color: var(--color-gray-300);
-    }
+.dark .project-details::after {
+    background-color: var(--color-gray-300);
 }
 
 .employment-period .project-details:last-of-type {

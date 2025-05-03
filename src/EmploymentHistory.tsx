@@ -1,4 +1,4 @@
-import { groupBy } from 'lodash';
+import { groupBy, isNil } from 'lodash';
 import { Component, For } from 'solid-js';
 import CategoryHeader from './CategoryHeader';
 import './EmploymentHistory.css';
@@ -12,7 +12,7 @@ const EmploymentHistory: Component = () => {
             <div class="mt-8">
                 <CategoryHeader text="Employment history" />
             </div>
-            <div class="mb-8 mt-4 text-gray-800 dark:text-neutral-300">
+            <div class="mt-4 mb-8 text-gray-800 dark:text-neutral-300">
                 <For
                     each={Object.entries(projectsGroupedByEmploymentPeriod).sort(
                         ([employmentPeriodId], [otherEmploymentPeriodId]) =>
@@ -30,7 +30,7 @@ const EmploymentHistory: Component = () => {
                         return (
                             <div class="employment-period mb-8">
                                 <div
-                                    class="employment-period-details relative cursor-pointer pb-4 ps-4"
+                                    class="employment-period-details relative cursor-pointer ps-4 pb-4"
                                     onClick={(event) =>
                                         event.currentTarget.parentElement?.classList.toggle('collapsed')
                                     }
@@ -55,7 +55,9 @@ const EmploymentHistory: Component = () => {
                                     <div class="text-sm italic">
                                         {employmentPeriod.startDate.toLocaleDateString() +
                                             ' - ' +
-                                            employmentPeriod.endDate.toLocaleDateString()}
+                                            ((employmentPeriod.endDate &&
+                                                employmentPeriod.endDate.toLocaleDateString()) ||
+                                                'present')}
                                     </div>
                                 </div>
 
@@ -63,7 +65,7 @@ const EmploymentHistory: Component = () => {
                                     <For each={projects}>
                                         {(project) => {
                                             return (
-                                                <div class="project-details relative border-l-2 border-gray-600 pb-4 ps-7 dark:border-gray-400 print:border-none">
+                                                <div class="project-details relative border-l-2 border-gray-600 ps-7 pb-4 dark:border-gray-400 print:border-none">
                                                     <h4 class="text-lg text-gray-700 dark:text-neutral-200">
                                                         {project.name}
                                                     </h4>
@@ -98,7 +100,9 @@ const EmploymentHistory: Component = () => {
                                                         </For>
                                                     </div>
 
-                                                    <div>{project.duration_months + ' month(s)'}</div>
+                                                    {!isNil(project.duration_months) && (
+                                                        <div>{project.duration_months + ' month(s)'}</div>
+                                                    )}
                                                 </div>
                                             );
                                         }}
