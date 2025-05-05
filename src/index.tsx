@@ -1,4 +1,4 @@
-import { Route, Router } from '@solidjs/router';
+import { HashRouter, Route, RouteSectionProps } from '@solidjs/router';
 import { lazy } from 'solid-js';
 import { render } from 'solid-js/web';
 
@@ -14,13 +14,15 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
     );
 }
 
+const App = (props: RouteSectionProps<unknown>) => <>{props.children}</>;
+
 if (root) {
     render(
         () => (
-            <Router>
-                <Route path="/cv/" component={SummarizedView} />
-                <Route path="/cv/details/" component={DetailedView} />
-            </Router>
+            <HashRouter root={App}>
+                <Route path="/" component={SummarizedView} />
+                <Route path="/details" component={DetailedView} />
+            </HashRouter>
         ),
         root,
     );

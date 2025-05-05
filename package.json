@@ -26,6 +26,7 @@
         "vite-plugin-solid": "^2.11.6",
         "vite-plugin-solid-svg": "^0.8.1"
     },
+    "homepage": "https://gergely-kovacs.github.io/cv/",
     "license": "MIT",
     "name": "cv-solid",
     "private": true,
