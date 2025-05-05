@@ -40,3 +40,11 @@ body {
 a {
     @apply text-sky-600 underline visited:text-sky-700 hover:text-sky-800 dark:text-indigo-300 dark:visited:text-indigo-400 dark:hover:text-indigo-500 print:text-gray-800 print:no-underline print:visited:text-gray-800 dark:print:text-gray-800 dark:print:visited:text-gray-800;
 }
+
+input[type='checkbox'] {
+    @apply cursor-pointer;
+}
+
+button {
+    @apply cursor-pointer;
+}
