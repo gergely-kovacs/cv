@@ -372,4 +372,4 @@ export const projects: Project[] = [
     },
 ];
 
-export const CORE_TECHNOLOGIES = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular'];
+export const CORE_TECHNOLOGIES = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'python'];

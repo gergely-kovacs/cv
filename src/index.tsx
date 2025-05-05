@@ -19,7 +19,7 @@ if (root) {
         () => (
             <Router>
                 <Route path="/cv/" component={SummarizedView} />
-                <Route path="/cv/details" component={DetailedView} />
+                <Route path="/cv/details/" component={DetailedView} />
             </Router>
         ),
         root,
