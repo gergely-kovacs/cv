@@ -295,9 +295,17 @@ export const projects: Project[] = [
         tasks: ['Responsivity improvements', 'template cleanup', 'resource deduplication'],
         duration_months: 1,
     },
-    // FIXME: Aldi Mobile missing from here
     {
         id: 14,
+        employmentPeriodId: 5,
+        name: 'Aldi Mobile',
+        goal: 'Mobile app where customers can purchase and manage their Aldi mobile phone subscriptions in Switzerland.',
+        technologies: ['HTML', 'CSS', 'TypeScript', 'git', 'Docker', 'Angular', 'Ionic'],
+        tasks: ['Frontend development'],
+        duration_months: 2,
+    },
+    {
+        id: 15,
         employmentPeriodId: 5,
         name: 'IndaPlay',
         goal: 'A video portal for major hungarian brands (e.g. Index, Totalcar, Economx).',
@@ -323,7 +331,7 @@ export const projects: Project[] = [
         duration_months: 5,
     },
     {
-        id: 15,
+        id: 16,
         employmentPeriodId: 5,
         name: 'sumixx',
         goal: 'A global payment provider for cross-border real estate transactions.',
