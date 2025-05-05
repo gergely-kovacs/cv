@@ -8,8 +8,6 @@ export interface ExperienceOptionsParams {
     setTechnologies: Setter<string[]>;
 }
 
-// TODO: styling
-// TODO: make sure the 'Dialog element is not connected' error is due to hot reloading
 function ExperienceOptions(props: ExperienceOptionsParams) {
     const technologies = [...new Set<string>(projects.flatMap((project) => project.technologies))];
 
@@ -28,33 +26,46 @@ function ExperienceOptions(props: ExperienceOptionsParams) {
 
     // TODO: implement a search field that highlights labels on match
     return (
-        <dialog ref={props.ref} class="max-w-(--breakpoint-sm) px-6 py-4">
-            <h2 class="text-xl">Please, select the technologies you wish to see!</h2>
-            <hr class="mb-6 mt-2" />
-            <form method="dialog" onSubmit={updateSelectedTechnologies} ref={technologyForm}>
+        <dialog
+            ref={props.ref}
+            class="m-auto max-w-(--breakpoint-sm) bg-stone-100 px-6 py-4 backdrop:bg-gray-700/50 dark:bg-gray-900"
+        >
+            <h2 class="text-xl text-zinc-800 dark:text-neutral-200">
+                Please, select the technologies you wish to see!
+            </h2>
+
+            <hr class="mt-2 mb-6" />
+
+            <form
+                class="text-gray-800 dark:text-neutral-300"
+                method="dialog"
+                onSubmit={updateSelectedTechnologies}
+                ref={technologyForm}
+            >
                 <div class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
                     <For each={technologies}>
                         {(technology) => (
-                            <label class="label flex items-center">
-                                <div>
-                                    <input
-                                        class="mr-2"
-                                        type="checkbox"
-                                        name={technology}
-                                        value={technology}
-                                        checked={props.selectedTechnologies.includes(technology)}
-                                    />
-                                </div>
-                                <div>{technology}</div>
+                            <label class="flex cursor-pointer items-center">
+                                <input
+                                    class="mr-2"
+                                    type="checkbox"
+                                    name={technology}
+                                    value={technology}
+                                    checked={props.selectedTechnologies.includes(technology)}
+                                />
+                                <span>{technology}</span>
                             </label>
                         )}
                     </For>
                 </div>
-                <hr class="mb-2 mt-6" />
+
+                <hr class="mt-6 mb-2" />
+
                 <div class="flex justify-between">
                     <button type="button" class="mx-2" onClick={closeDialog}>
                         Cancel
                     </button>
+
                     <button type="submit" class="mx-2">
                         Save
                     </button>
