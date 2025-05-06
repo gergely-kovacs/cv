@@ -66,8 +66,7 @@ function ExperienceSummary(props: ExperienceSummaryParams) {
                 <For each={Object.entries(jobSummary).filter(([key]) => props.selectedTechnologies.includes(key))}>
                     {([key, value]) => {
                         return (
-                            // TODO: consider colouring by row to make it easier to read
-                            <div class="flex flex-wrap justify-between">
+                            <div class="flex flex-wrap justify-between rounded-sm px-1.5 py-0.5 even:bg-slate-400/20 dark:even:bg-gray-800/60">
                                 <div class="font-semibold">{key}:</div>
                                 {mapMonthsToYearsAndMonths(value)}
                             </div>
