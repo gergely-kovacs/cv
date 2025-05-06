@@ -6,7 +6,7 @@ function PersonalDetails() {
             <div class="mt-8">
                 <CategoryHeader text="Personal & Contact Details" />
             </div>
-            <div class="mt-4 mb-8 flex flex-col gap-2 text-gray-800 sm:gap-0 dark:text-neutral-300">
+            <div class="mt-4 mb-8 flex flex-col gap-2 px-1.5 text-gray-800 sm:gap-0 dark:text-neutral-300">
                 <div class="flex flex-wrap justify-between">
                     <div class="basis-full font-semibold sm:basis-auto">First name:</div>
                     <div>Gergely</div>
