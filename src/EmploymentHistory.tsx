@@ -35,7 +35,7 @@ const EmploymentHistory: Component = () => {
                                         event.currentTarget.parentElement?.classList.toggle('collapsed')
                                     }
                                 >
-                                    <h2 class="flex text-xl text-gray-700 dark:text-neutral-200">
+                                    <h2 class="flex text-xl font-semibold text-gray-700 dark:text-neutral-200">
                                         {employer?.name}
                                         <span class="chevron ml-auto">&#708;</span>
                                     </h2>
@@ -66,25 +66,11 @@ const EmploymentHistory: Component = () => {
                                         {(project) => {
                                             return (
                                                 <div class="project-details relative border-l-2 border-gray-600 ps-7 pb-4 dark:border-gray-400 print:border-none">
-                                                    <h4 class="text-lg text-gray-700 dark:text-neutral-200">
+                                                    <h4 class="text-lg font-semibold text-gray-700 dark:text-neutral-200">
                                                         {project.name}
                                                     </h4>
 
-                                                    <div>{project.goal}</div>
-
-                                                    <div>
-                                                        <For each={project.technologies}>
-                                                            {(technology, index) => {
-                                                                return (
-                                                                    <span>
-                                                                        {index() === project.technologies.length - 1
-                                                                            ? technology
-                                                                            : technology + ', '}
-                                                                    </span>
-                                                                );
-                                                            }}
-                                                        </For>
-                                                    </div>
+                                                    <div class="font-semibold">{project.goal}</div>
 
                                                     <div>
                                                         <For each={project.tasks}>
@@ -94,6 +80,20 @@ const EmploymentHistory: Component = () => {
                                                                         {index() === project.tasks.length - 1
                                                                             ? task
                                                                             : task + ', '}
+                                                                    </span>
+                                                                );
+                                                            }}
+                                                        </For>
+                                                    </div>
+
+                                                    <div class="italic">
+                                                        <For each={project.technologies}>
+                                                            {(technology, index) => {
+                                                                return (
+                                                                    <span>
+                                                                        {index() === project.technologies.length - 1
+                                                                            ? technology
+                                                                            : technology + ', '}
                                                                     </span>
                                                                 );
                                                             }}
