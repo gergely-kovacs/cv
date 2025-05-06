@@ -21,7 +21,7 @@ function PersonalDetails() {
                 </div>
                 <div class="flex flex-wrap justify-between">
                     <div class="basis-full font-semibold sm:basis-auto">Nationality:</div>
-                    <div>hungarian</div>
+                    <div>Hungarian</div>
                 </div>
                 <div class="flex flex-wrap justify-between">
                     <div class="basis-full font-semibold sm:basis-auto">Highest degree:</div>
@@ -29,11 +29,14 @@ function PersonalDetails() {
                 </div>
                 <div class="flex flex-wrap justify-between">
                     <div class="basis-full font-semibold sm:basis-auto">Email:</div>
-                    <div>gergely-kovacs@hotmail.com</div>
+                    <a href="mailto:gergely-kovacs@hotmail.com">gergely-kovacs@hotmail.com</a>
                 </div>
                 <div class="flex flex-wrap justify-between">
                     <div class="basis-full font-semibold sm:basis-auto">Phone:</div>
-                    <div>+36 70 389 7606</div>
+                    <div class="flex flex-col gap-x-1.5 sm:flex-row">
+                        <a href="tel:+36703897606">+36 70 389 7606,</a>
+                        <a href="tel:+46769226158">+46 76 922 6158</a>
+                    </div>
                 </div>
                 <div class="flex flex-wrap justify-between">
                     <div class="basis-full font-semibold sm:basis-auto">LinkedIn:</div>
