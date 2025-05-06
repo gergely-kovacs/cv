@@ -31,7 +31,7 @@ export interface Employer {
 export const clients: Employer[] = [
     {
         id: 1,
-        name: 'UBS',
+        name: 'Union Bank Switzerland',
         website: 'https://www.ubs.com/global/en.html',
     },
     {
@@ -48,6 +48,21 @@ export const clients: Employer[] = [
         id: 4,
         name: 'Axis Aviation',
         website: 'https://axis-aviation.com/',
+    },
+    {
+        id: 5,
+        name: 'ALDI SUISSE',
+        website: 'https://www.aldi-suisse.ch/de/homepage.html',
+    },
+    {
+        id: 6,
+        name: 'Indamedia',
+        website: 'https://indamedia.hu/',
+    },
+    {
+        id: 7,
+        name: 'sumixx',
+        website: 'https://sumixx.com/',
     },
 ];
 
