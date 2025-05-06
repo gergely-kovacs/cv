@@ -15,10 +15,10 @@ function ExperienceSummary(props: ExperienceSummaryParams) {
         (summary, jobDetails) => {
             jobDetails.technologies.forEach((tech) => {
                 if (summary[tech]) {
-                    summary[tech] += jobDetails.duration_months;
+                    summary[tech] += jobDetails.duration_months || 0;
                     return;
                 }
-                summary[tech] = jobDetails.duration_months;
+                summary[tech] = jobDetails.duration_months || 0;
             });
             return summary;
         },
@@ -62,7 +62,7 @@ function ExperienceSummary(props: ExperienceSummaryParams) {
                     <Gear />
                 </button>
             </CategoryHeader>
-            <div class="mb-8 mt-4 text-gray-800 dark:text-neutral-300">
+            <div class="mt-4 mb-8 text-gray-800 dark:text-neutral-300">
                 <For each={Object.entries(jobSummary).filter(([key]) => props.selectedTechnologies.includes(key))}>
                     {([key, value]) => {
                         return (
