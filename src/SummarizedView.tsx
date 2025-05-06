@@ -28,8 +28,8 @@ function SummarizedView() {
                 selectedTechnologies={technologies()}
                 setTechnologies={setTechnologies}
             />
-            <PreviousEmployers />
             <PreviousClients />
+            <PreviousEmployers />
         </div>
     );
 }
