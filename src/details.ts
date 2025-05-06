@@ -4,14 +4,12 @@ export type Position =
     | 'Software Engineer'
     | 'Senior Software Engineer';
 
-// FIXME: website is on the employer, remove from employment period
 export interface EmploymentPeroid {
     id: number;
     employerId: number;
     positions: Position[];
     startDate: Date;
     endDate: Date | null;
-    website: string;
 }
 
 export interface Project {
@@ -78,7 +76,6 @@ export const employmentPeriods: EmploymentPeroid[] = [
         positions: ['Software Engineer Trainee', 'Junior Software Engineer'],
         startDate: new Date('2016-04-01'),
         endDate: new Date('2017-10-31'),
-        website: 'https://www.adnovum.com/',
     },
     {
         id: 2,
@@ -86,7 +83,6 @@ export const employmentPeriods: EmploymentPeroid[] = [
         positions: ['Software Engineer'],
         startDate: new Date('2017-11-01'),
         endDate: new Date('2019-03-31'),
-        website: 'https://www.gg.dev/',
     },
     {
         id: 3,
@@ -94,7 +90,6 @@ export const employmentPeriods: EmploymentPeroid[] = [
         positions: ['Software Engineer'],
         startDate: new Date('2019-09-01'),
         endDate: new Date('2019-10-31'),
-        website: 'https://www.kuka.com/',
     },
     {
         id: 4,
@@ -102,7 +97,6 @@ export const employmentPeriods: EmploymentPeroid[] = [
         positions: ['Software Engineer'],
         startDate: new Date('2021-03-01'),
         endDate: new Date('2023-07-31'),
-        website: 'https://www.gg.dev/',
     },
     {
         id: 5,
@@ -110,7 +104,6 @@ export const employmentPeriods: EmploymentPeroid[] = [
         positions: ['Software Engineer', 'Senior Software Engineer'],
         startDate: new Date('2024-06-21'),
         endDate: new Date('2024-12-31'),
-        website: 'https://www.gg.dev/',
     },
     {
         id: 6,
@@ -118,7 +111,6 @@ export const employmentPeriods: EmploymentPeroid[] = [
         positions: ['Senior Software Engineer'],
         startDate: new Date('2025-03-25'),
         endDate: null,
-        website: 'https://www.gg.dev/',
     },
 ];
 
