@@ -262,7 +262,7 @@ export const projects: Project[] = [
         employmentPeriodId: 4,
         name: 'Consor Policy Manager',
         goal: 'An insurance management platform',
-        technologies: ['CSS', 'git', 'Docker', 'Java', 'Vaadin'],
+        technologies: ['HTML', 'CSS', 'git', 'Docker', 'Java', 'Vaadin'],
         tasks: ['Frontend development'],
         duration_months: 1,
     },
@@ -355,10 +355,10 @@ export const projects: Project[] = [
             'AlpineJS',
         ],
         tasks: ['Fullstack development'],
-        duration_months: 3,
+        duration_months: 9,
     },
     {
-        id: 16,
+        id: 17,
         employmentPeriodId: 6,
         name: 'Neon',
         goal: 'A content management system for online magazines of major hungarian brands (e.g. Totalcar, We love Dogz / We love Catz).',
@@ -375,7 +375,7 @@ export const projects: Project[] = [
             'AlpineJS',
         ],
         tasks: ['Fullstack development'],
-        duration_months: null,
+        duration_months: 2,
     },
 ];
 
